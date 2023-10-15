@@ -22,7 +22,7 @@ author: Xeonacid, nocriz
 
 公式：$C_{i} = \sum_{i=j \bigoplus k}A_{j} B_{k}$
 
-（其中 $\bigoplus$ 是二元位运算中的某一种，$*$ 是普通乘法）
+（其中 $\bigoplus$ 是二元位运算中的某一种，$\times$ 是普通乘法）
 
 ## FWT 的运算
 
@@ -34,11 +34,11 @@ author: Xeonacid, nocriz
 
 如果有 $k=i|j$，那么 $i$ 的二进制位为 $1$ 的位置和 $j$ 的二进制位为 $1$ 的位置肯定是 $k$ 的二进制位为 $1$ 的位置的子集。
 
-现在要得到 $FWT[C] = FWT[A] * FWT[B]$，我们就要构造这个 fwt 的规则。
+现在要得到 $FWT[C] = FWT[A] \times FWT[B]$，我们就要构造这个 fwt 的规则。
 
 我们按照定义，显然可以构造 $FWT[A] = A' = \sum_{i=i|j}A_{j}$，来表示 $j$ 满足二进制中 $1$ 为 $i$ 的子集。
 
-那么显然会有 $C_{i} = \sum_{i=j|k}A_{j}*B_{k} \implies FWT[C] = FWT[A] * FWT[B]$
+那么显然会有 $C_{i} = \sum_{i=j|k}A_{j} \times B_{k} \implies FWT[C] = FWT[A] \times FWT[B]$
 
 那么我们接下来看 $FWT[A]$ 怎么求。
 
